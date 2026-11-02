@@ -35,22 +35,47 @@ namespace Backprop_logicalOperations
             {
 
                 //perform AND operation
-                //1 AND 1 = 1
+                ////1 AND 1 = 1
+                //nn.setInputs(0, 1.0);
+                //nn.setInputs(1, 1.0);
+                //nn.setDesiredOutput(0, 1.0);
+                //nn.learn();
+
+                ////0 AND 1 = 0
+                //nn.setInputs(0, 0);
+                //nn.setInputs(1, 1.0);
+                //nn.setDesiredOutput(0, 0);
+                //nn.learn();
+
+                ////1 AND 0 = 0
+                //nn.setInputs(0, 1.0);
+                //nn.setInputs(1, 0);
+                //nn.setDesiredOutput(0, 0);
+                //nn.learn();
+
+                ////0 AND 0 = 0
+                //nn.setInputs(0, 0);
+                //nn.setInputs(1, 0);
+                //nn.setDesiredOutput(0, 0);
+                //nn.learn();
+
+                //XOR operation
+                //1 AND 1 = 0
                 nn.setInputs(0, 1.0);
                 nn.setInputs(1, 1.0);
-                nn.setDesiredOutput(0, 1.0);
+                nn.setDesiredOutput(0, 0);
                 nn.learn();
 
-                //0 AND 1 = 0
+                //0 AND 1 = 1
                 nn.setInputs(0, 0);
                 nn.setInputs(1, 1.0);
-                nn.setDesiredOutput(0, 0);
+                nn.setDesiredOutput(0, 1);
                 nn.learn();
 
-                //1 AND 0 = 0
+                //1 AND 0 = 1
                 nn.setInputs(0, 1.0);
                 nn.setInputs(1, 0);
-                nn.setDesiredOutput(0, 0);
+                nn.setDesiredOutput(0, 1);
                 nn.learn();
 
                 //0 AND 0 = 0
